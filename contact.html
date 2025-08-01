@@ -1,6 +1,58 @@
-<div id="back-home"></div>
-<script>
-  fetch('/james-portfolio/back-home.html')
-    .then(res => res.text())
-    .then(html => document.getElementById('back-home').innerHTML = html);
-</script>
+
+
+
+ <!-- === Navigation Section === -->
+  <nav>
+    <a href="index.html">🏠 Home</a>
+    <a href="resume.html">📄 Resume</a>
+    <a href="playbook/playbook.html">📘 Playbook</a>
+    <a href="contact.html">📬 Contact</a>
+  </nav>
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Me – James Hunnicutt</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+  <header class="hero">
+    <h1>Let’s Connect 🤝</h1>
+    <p>I’m always open to conversations around Agile delivery, visual storytelling, and mission-driven work.</p>
+    <a href="#contact-form" class="cta-button">Start the Conversation</a>
+  </header>
+
+  <section class="contact-options">
+    <h2>Reach Out</h2>
+    <ul>
+      <li>📧 <strong>Email:</strong> <a href="mailto:james.hunnicutt87@gmail.com">james.hunnicutt87@gmail.com</a></li>
+      <li>💼 <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/jameshunnicutt" target="_blank">linkedin.com/in/jameshunnicutt</a></li>
+      <li>📅 <strong>Calendly:</strong> <a href="https://calendly.com/james-hunnicutt87/new-meeting" target="_blank">Book a 15-min chat</a></li>
+    </ul>
+  </section>
+
+  <section class="form-section">
+    <h2>Send a Message</h2>
+    <form id="contact-form" action="https://formspree.io/f/yourformid" method="POST">
+      <label>Name</label>
+      <input type="text" name="name" required>
+
+      <label>Email</label>
+      <input type="email" name="email" required>
+
+      <label>Message</label>
+      <textarea name="message" rows="5" required></textarea>
+
+      <button type="submit">Send Message 🚀</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 James Hunnicutt · Built with purpose and a touch of playfulness</p>
+  </footer>
+
+</body>
+</html>
