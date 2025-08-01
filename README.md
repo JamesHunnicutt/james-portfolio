@@ -25,7 +25,7 @@ Welcome to my portfolio repository! I'm an Agile Leader and Technical PM with 7+
 # 🚀 Live Portfolio
 
 Visit the live site:  
-🔗 **[jameshunnicutt.github.io/james-portfolio](https://jameshunnicutt.github.io/james-portfolio/)**  
+🔗 **[jameshunnicutt.github.io/james-portfolio](https://jameshunnicutt.github.io/james-portfolio/index.html)**  
 Built with HTML, CSS, and a passion for visual storytelling.
 ---
 
