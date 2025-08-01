@@ -46,6 +46,11 @@
   <footer>
     <p>&copy; 2025 James Hunnicutt</p>
   </footer>
-
+<div id="back-home"></div>
+<script>
+  fetch('/james-portfolio/back-home.html')
+    .then(res => res.text())
+    .then(html => document.getElementById('back-home').innerHTML = html);
+</script>
 </body>
 </html>
