@@ -123,8 +123,66 @@ if (module === 'coaching') {
       <li>🧠 Rotate prompts weekly to keep them fresh</li>
       <li>🎯 Invite the team to create their own prompts</li>
     </ul>
+  `
+  ;
+}
+if (module === 'philosophy') {
+  modalBody.innerHTML = `
+    <h3>🧭 Delivery Philosophy</h3>
+    <p><em>Agile isn’t just a framework — it’s a mindset.</em></p>
+    <ul>
+      <li><strong>Transparency over perfection:</strong> We share early, often, and honestly.</li>
+      <li><strong>Empowerment over control:</strong> Teams thrive when they own their process.</li>
+      <li><strong>Progress over process:</strong> Rituals serve outcomes, not the other way around.</li>
+    </ul>
+    <p>Every decision, ritual, and metric should reinforce clarity, trust, and momentum.</p>
   `;
 }
+
+if (module === 'norms') {
+  modalBody.innerHTML = `
+    <h3>🧑‍🤝‍🧑 Team Norms</h3>
+    <p><em>Culture is built in the small moments.</em></p>
+    <ul>
+      <li><strong>Feedback is a gift:</strong> We give and receive it with curiosity and care.</li>
+      <li><strong>Retros are sacred:</strong> We protect time for reflection and growth.</li>
+      <li><strong>Document decisions:</strong> Not just tasks — clarity lives in context.</li>
+      <li><strong>Participation over presence:</strong> Cameras optional, engagement essential.</li>
+    </ul>
+    <p>These norms evolve with the team — we revisit them quarterly.</p>
+  `;
+}
+
+if (module === 'tools') {
+  modalBody.innerHTML = `
+    <h3>🛠️ Tool Stack</h3>
+    <p><em>Tools should amplify clarity, not clutter.</em></p>
+    <table>
+      <tr><th>Tool</th><th>Purpose</th></tr>
+      <tr><td>Jira</td><td>Sprint tracking & backlog management</td></tr>
+      <tr><td>Confluence</td><td>Documentation & decision logs</td></tr>
+      <tr><td>Miro</td><td>Visual collaboration & retros</td></tr>
+      <tr><td>Slack</td><td>Real-time communication</td></tr>
+      <tr><td>Postman</td><td>API testing & validation</td></tr>
+    </table>
+    <p>We review tooling quarterly to ensure it still serves the team’s needs.</p>
+  `;
+}
+
+if (module === 'improvement') {
+  modalBody.innerHTML = `
+    <h3>🧪 Continuous Improvement</h3>
+    <p><em>We treat delivery as a living system — always evolving.</em></p>
+    <ul>
+      <li><strong>Delivery Labs:</strong> Monthly sessions to test new rituals or metrics.</li>
+      <li><strong>Retro Remix:</strong> Gamified formats to keep feedback fresh.</li>
+      <li><strong>Demo Roulette:</strong> Randomized presenters to boost cross-team exposure.</li>
+      <li><strong>MTTR Tracking:</strong> Using incident tags to monitor recovery speed.</li>
+    </ul>
+    <p>Every experiment is documented, reviewed, and either adopted or retired.</p>
+  `;
+}
+
   // Add other modules here (metrics, coaching, etc.)
 }
 

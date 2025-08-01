@@ -9,18 +9,24 @@
 </head>
 
 <body>
+  <header class="hero">
+  <div class="hero-content">
+    <h1>📘 Agile Playbook</h1>
+    <p>Your toolkit for clean delivery, actionable metrics, and empowered teams.</p>
+  </div>
+</header>
   <!-- === Navigation Section === -->
   <nav>
-    <a href="index.html">🏠 Home</a>
-    <a href="resume.html">📄 Resume</a>
-    <a href="playbook.html">📘 Playbook</a>
-    <a href="contact.html">📬 Contact</a>
+    <a href="../index.html">🏠 Home</a>
+    <a href="../resume.html">📄 Resume</a>
+    <a href="../hobbies.html">🎨 Hobbies</a>
+    <a href="../contact.html">📬 Contact</a>
   </nav>
 
   <!-- === Playbook Section === -->
   <section class="playbook-grid">
     <div class="card delivery">
-      <div class="icon">🚀</div>
+      <div class="icon bounce">🚀</div>
       <h3>Sprint Hygiene Toolkit</h3>
       <p>Keep your sprints clean, focused, and outcome-driven with this 3-part guide.</p>
       <button onclick="openModal('sprint')">View Module</button>
@@ -28,14 +34,14 @@
     </div>
 
     <div class="card reporting">
-      <div class="icon">📊</div>
+      <div class="icon bounce">📊</div>
       <h3>Metrics That Matter</h3>
       <p>From MTTR to Planned vs. Committed — how to make metrics actionable.</p>
       <button onclick="openModal('metrics')">View Module</button>
     </div>
 
     <div class="card coaching">
-      <div class="icon">🧠</div>
+      <div class="icon bounce">🧠</div>
       <h3>Agile Mindset Moments</h3>
       <p>Micro-coaching prompts to shift team thinking and build ownership.</p>
       <button onclick="openModal('coaching')">View Module</button>
