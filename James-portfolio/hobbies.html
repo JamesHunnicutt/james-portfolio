@@ -1,56 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My Hobbies – James Hunnicutt</title>
-  <link rel="stylesheet" href="css/style.css"> <!-- Optional external styling -->
+    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <title>My Hobbies</title>
 </head>
 <body>
 
-  <header>
-    <h1>Outside the Office</h1>
-    <p>Here’s what keeps me inspired, balanced, and recharged outside of project plans and playbooks.</p>
-  </header>
+  <!-- === Page Title === -->
+  <h1>🎨 My Hobbies</h1>
 
+  
+
+  <!-- === Navigation Section === -->
   <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="resume.html">Resume</a></li>
-      <li><a href="playbook.html">Playbook</a></li>
-      <li><a href="contact-info.html">Contact</a></li>
-    </ul>
+    <a href="index.html">🏠 Home</a>
+    <a href="resume.html">📄 Resume</a>
+    <a href="playbook.html">📘 Playbook</a>
+    <a href="contact.html">📬 Contact</a>
   </nav>
+<section class="hobbies">
+  <h2 class="hobbies-title">Outside the Office</h2>
+  <p class="hobbies-intro">Here’s what keeps me inspired, balanced, and recharged outside of project plans and playbooks.</p>
 
-  <main>
-    <section>
-      <h2>🚣 Kayaking</h2>
-      <p>There’s nothing quite like gliding through quiet waters—especially on Tennessee rivers or during family getaways. It’s where I recharge and reflect.</p>
-    </section>
+  <div class="hobby-grid">
+    <div class="hobby-card">
+      <h3>🚣 Kayaking</h3>
+      <p>Gliding through quiet waters—especially on Tennessee rivers or family getaways—is where I recharge and reflect.</p>
+    </div>
 
-    <section>
-      <h2>🎮 Video Games</h2>
-      <p>Whether it’s strategic problem-solving or just letting off steam with friends, gaming taps into creativity and adaptability—plus a bit of healthy competition!</p>
-    </section>
+    <div class="hobby-card">
+      <h3>🎮 Video Games</h3>
+      <p>Strategic problem-solving, creative adaptability, and a bit of healthy competition—gaming keeps me sharp and social.</p>
+    </div>
 
-    <section>
-      <h2>👨‍👩‍👧‍👦 Family Time</h2>
-      <p>Some of my best problem-solving happens around the dinner table. We laugh, we reminisce, and we keep each other grounded—family is my foundation.</p>
-    </section>
+    <div class="hobby-card">
+      <h3>👨‍👩‍👧‍👦 Family Time</h3>
+      <p>Some of my best problem-solving happens around the dinner table. Family keeps me grounded and laughing.</p>
+    </div>
 
-    <section>
-      <h2>🏖️ Poolside Relaxation</h2>
-      <p>Sunny weekends, pool floats, and just enough splash to forget the sprint velocity. Water's always been a favorite reset button.</p>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 James Hunnicutt</p>
-  </footer>
-<div id="back-home"></div>
-<script>
-  fetch('/james-portfolio/back-home.html')
-    .then(res => res.text())
-    .then(html => document.getElementById('back-home').innerHTML = html);
-</script>
-</body>
-</html>
+    <div class="hobby-card">
+      <h3>🏖️ Poolside Relaxation</h3>
+      <p>Sunny weekends, pool floats, and just enough splash to forget the sprint velocity. Water resets everything.</p>
+    </div>
+  </div>
+</section>
