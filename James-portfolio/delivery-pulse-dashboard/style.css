@@ -1,0 +1,139 @@
+/* === Global Styles === */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f7fa;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+/* Dashboard Title */
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2c3e50;
+}
+
+/* === Dashboard Layout === */
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* === Card Styling === */
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 20px;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 1.1em;
+  color: #34495e;
+}
+
+/* === Metric Displays === */
+.metric, .stars {
+  font-size: 2em;
+  margin: 10px 0;
+}
+
+.emoji {
+  font-size: 2.5em;
+  margin-top: 10px;
+}
+
+/* === Stability Gauge === */
+/* === Stability Slider === */
+.slider-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.slider {
+  width: 100%;
+  margin: 10px 0;
+  accent-color: #3498db;
+}
+
+.slider-labels {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 0.85em;
+  color: #7f8c8d;
+}
+
+#stabilityEmoji {
+  font-size: 2em;
+  margin-top: 10px;
+}
+
+.gauge-indicator {
+  position: absolute;
+  top: -5px;
+  left: 60%; /* Adjust this to reflect current stability */
+  font-size: 1.5em;
+}
+
+/* === Retro Action Items === */
+.toggle-btn {
+  background: none;
+  border: none;
+  font-size: 1em;
+  font-weight: bold;
+  color: #2c3e50;
+  cursor: pointer;
+  margin-bottom: 5px;
+  padding: 5px 0;
+}
+
+.items {
+  display: none; /* Hidden by default, toggled via JS */
+  margin-bottom: 15px;
+}
+
+.sprint ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.sprint li {
+  margin-bottom: 8px;
+  font-size: 0.95em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* === Status Badges === */
+.badge {
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.75em;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+.badge.done {
+  background-color: #2ecc71;
+}
+
+.badge.in-progress {
+  background-color: #f1c40f;
+}
+
+.badge.planned {
+  background-color: #3498db;
+}
