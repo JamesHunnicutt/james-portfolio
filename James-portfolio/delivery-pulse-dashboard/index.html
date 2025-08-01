@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Delivery Pulse Dashboard</title>
+
+  <!-- Link to external CSS and Chart.js library -->
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <!-- Dashboard Title -->
+  <h1>🚀 Delivery Pulse Dashboard</h1>
+
+  <!-- Main Dashboard Container -->
+  <div class="dashboard">
+
+    <!-- 🔥 Velocity Trend Card -->
+    <div class="card">
+      <h2>🔥 Velocity Trend</h2>
+      <canvas id="velocityChart" width="400" height="200"></canvas>
+    </div>
+
+    <!-- 📊 Planned vs. Committed Card -->
+    <div class="card">
+      <h2>📊 Planned vs. Committed</h2>
+      <canvas id="plannedCommittedChart" width="400" height="200"></canvas>
+    </div>
+
+    <!-- 🧘 Stability Index Card -->
+    <!-- 🧘 Stability Index Card -->
+<div class="card">
+  <h2>🧘 Stability Index</h2>
+  <div class="slider-container">
+    <input type="range" min="0" max="100" value="60" class="slider" id="stabilitySlider">
+    <div class="slider-labels">
+      <span>Low</span>
+      <span>Medium</span>
+      <span>High</span>
+    </div>
+    <div id="stabilityEmoji">🧘</div>
+  </div>
+</div>
+
+    <!-- 💬 Team Vibe Check Card -->
+    <div class="card">
+      <h2>💬 Team Vibe Check</h2>
+      <!-- Emoji-based sentiment display -->
+      <div class="emoji">😊😐😟</div>
+    </div>
+
+    <!-- 🎯 Delivery Confidence Card -->
+    <div class="card">
+      <h2>🎯 Delivery Confidence</h2>
+      <!-- Star rating for delivery confidence -->
+      <div class="stars">⭐️⭐️⭐️⭐️</div>
+    </div>
+
+    <!-- 🔄 Retro Action Items Card -->
+    <div class="card">
+      <h2>🔄 Retro Action Items</h2>
+      <div class="retro-list">
+
+        <!-- Sprint 5 Action Items -->
+        <div class="sprint">
+          <button class="toggle-btn">Sprint 5 ⬇️</button>
+          <div class="items">
+            <ul>
+              <li><span class="badge planned">Planned</span> Improve backlog refinement cadence</li>
+              <li><span class="badge in-progress">In Progress</span> Reduce rollover by clarifying scope early</li>
+              <li><span class="badge done">Done</span> Share demo recordings with stakeholders</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Sprint 4 Action Items -->
+        <div class="sprint">
+          <button class="toggle-btn">Sprint 4 ⬇️</button>
+          <div class="items">
+            <ul>
+              <li><span class="badge done">Done</span> Add Definition of Ready to team board</li>
+              <li><span class="badge in-progress">In Progress</span> Address test coverage gaps</li>
+              <li><span class="badge planned">Planned</span> Celebrate wins in retros</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- External badge behavior script -->
+  <script src="badge.js"></script>
+
+  <!-- Chart.js Configuration Scripts -->
+  <script>
+    // 🔥 Velocity Chart Setup
+    const ctx1 = document.getElementById('velocityChart').getContext('2d');
+    new Chart(ctx1, {
+      type: 'bar',
+      data: {
+        labels: ['Sprint 1', 'Sprint 2', 'Sprint 3', 'Sprint 4', 'Sprint 5'],
+        datasets: [{
+          label: 'Velocity (pts)',
+          data: [28, 32, 30, 35, 33],
+          backgroundColor: '#3498db',
+          borderRadius: 5
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: ctx => `Velocity: ${ctx.parsed.y} pts`
+            }
+          }
+        },
+        scales: {
+          y: { beginAtZero: true, ticks: { stepSize: 5 } }
+        }
+      }
+    });
+
+    // 📊 Planned vs. Committed Chart Setup
+    const ctx2 = document.getElementById('plannedCommittedChart').getContext('2d');
+    new Chart(ctx2, {
+      type: 'bar',
+      data: {
+        labels: ['Sprint 1', 'Sprint 2', 'Sprint 3', 'Sprint 4', 'Sprint 5'],
+        datasets: [
+          {
+            label: 'Planned',
+            data: [30, 34, 32, 36, 35],
+            backgroundColor: '#95a5a6'
+          },
+          {
+            label: 'Committed',
+            data: [28, 32, 30, 35, 33],
+            backgroundColor: '#3498db'
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { position: 'bottom' },
+          tooltip: {
+            callbacks: {
+              label: ctx => `${ctx.dataset.label}: ${ctx.parsed.y} pts`,
+              afterLabel: ctx => {
+                const planned = ctx.chart.data.datasets[0].data[ctx.dataIndex];
+                const committed = ctx.chart.data.datasets[1].data[ctx.dataIndex];
+                const delta = committed - planned;
+                return `Δ ${delta >= 0 ? '+' : ''}${delta} pts`;
+              }
+            }
+          }
+        },
+        scales: {
+          y: { beginAtZero: true, ticks: { stepSize: 5 } }
+        }
+      }
+    });
+
+    // 🔄 Retro Section Toggle Behavior
+    document.querySelectorAll('.toggle-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const items = button.nextElementSibling;
+        const isVisible = items.style.display === 'block';
+        items.style.display = isVisible ? 'none' : 'block';
+        button.textContent = button.textContent.includes('⬇️')
+          ? button.textContent.replace('⬇️', '⬆️')
+          : button.textContent.replace('⬆️', '⬇️');
+      });
+    });
+  </script>
+</body>
+</html>
+
+Add Delivery Pulse Dashboard folder and index.html
