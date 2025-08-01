@@ -186,22 +186,6 @@ nav a:hover {
 
 /* === Project Card === */
 
-.project-card {
-  background-color: var(--background-color);
-  border: 2px solid var(--theme-border-color);
-  border-radius: 12px;
-  padding: 1.5rem;
-  margin: 1rem 0;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  animation: fadeInPop 0.8s ease-out;
-}
-
-.project-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-  border-color: var(--hover-color);
-}
 
 /* Optional: Title inside card */
 .project-card h3 {
@@ -299,19 +283,28 @@ h1, h2, h3 {
 
 /* === Project Cards === */
 .project-card {
-  background-color: #ffffff;
-  border: 2px solid #1ABC9C;
-  border-radius: 12px;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block;
+  margin: 1rem auto 0;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  background-color: var(--accent-color);
+  color: white;
+  text-align: center;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
+
+
 
 .project-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  border-color: var(--hover-color);
 }
+
 
 /* === Button === */
 .button {
