@@ -29,24 +29,44 @@
   </nav>
 
   <!-- === Featured Projects Section === -->
-  <h2>🧭 Featured Projects</h2>
-  <div class="projects">
+ <section id="featured-projects" class="featured-projects">
+  <h2>Featured Projects</h2>
+  <div class="cards-container">
+    <!-- Card 1 -->
+    <article class="card">
+      <i class="fas fa-chart-line card-icon"></i>
+      <div class="card-content">
+        <h3>Delivery Pulse Dashboard</h3>
+        <p>
+          An interactive Agile dashboard with charts, sliders, and retro
+          tracking—driving real-time team insights and continuous delivery
+          improvement.
+        </p>
+        <a href="delivery-pulse-dashboard/index.html" class="card-link">
+          View Project →
+        </a>
+      </div>
+    </article>
 
-    <!-- === Delivery Pulse Dashboard Card === -->
-    <div class="project-card" onclick="location.href='./delivery-pulse-dashboard/index.html'">
-      <a href="./delivery-pulse-dashboard/index.html">🚀 Delivery Pulse Dashboard</a>
-      <span>Interactive Agile dashboard with charts, sliders, and retro tracking.</span>
-    </div>
+    <!-- Card 2 -->
+    <article class="card">
+      <i class="fas fa-users card-icon"></i>
+      <div class="card-content">
+        <h3>Ceremony Cards</h3>
+        <p>
+          A flip-card toolkit of Agile ceremonies with purpose, tips,
+          anti-patterns, and coaching prompts to boost alignment and
+          continuous improvement.
+        </p>
+        <a href="ceremony-cards/ceremony-cards.html" class="card-link">
+          View Project →
+        </a>
+      </div>
+    </article>
 
-    <!-- === Additional Project Card (Example) === -->
-    
-    <div class="project-card" onclick="location.href='./ceremony-cards/ceremony-cards.html'">
-      <a href="./ceremony-cards/ceremony-cards.html">📇 Ceremony Cards</a>
-      <span>An interactive toolkit of Agile ceremony cards that guides teams through stand-ups, planning, reviews, and retrospectives—complete with purpose, tips, anti-patterns, and coaching prompts to drive alignment and continuous improvement.</span>
-    </div>
-    
-
+    <!-- Add more icon cards here... -->
   </div>
+</section>
 
 </body>
 </html>
