@@ -1,0 +1,56 @@
+.ceremony-card {
+  width: 300px;
+  height: 400px;
+  perspective: 1000px;
+  margin: 20px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.ceremony-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  background-color: #fefefe;
+}
+
+.card-front {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #e0f7fa;
+}
+
+.card-icon {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  overflow-y: auto;
+  background-color: #fff3e0;
+}
+
+.cards-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
