@@ -282,28 +282,93 @@ h1, h2, h3 {
 }
 
 /* === Project Cards === */
-.project-card {
+/* Icon Styling */
+.card-icon {
+  font-size: 3rem;
+  color: #0066cc;
+  margin: 1.5rem auto 0.5rem;
   display: block;
-  margin: 1rem auto 0;
-  padding: 0.5rem 1rem;
-  font-size: 0.9rem;
-  border-radius: 6px;
-  background-color: var(--accent-color);
-  color: white;
-  text-align: center;
-  font-weight: 600;
-  text-decoration: none;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
+/* Container & Grid */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
 
+/* Card Base */
+.card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
-.project-card:hover {
+/* Card Hover */
+.card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-  border-color: var(--hover-color);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
+
+/* Content Wrapper */
+.card-content {
+  padding: 0 1rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Headings & Text */
+.card-content h3 {
+  margin: 0.5rem 0;
+  font-size: 1.25rem;
+}
+
+.card-content p {
+  flex-grow: 1;
+  margin: 0 0 1rem;
+  line-height: 1.5;
+  color: #333333;
+}
+
+/* Link */
+.card-link {
+  text-decoration: none;
+  color: #0066cc;
+  font-weight: 500;
+  align-self: flex-start;
+  transition: color 0.2s ease;
+}
+
+.card-link:hover {
+  color: #004a99;
+}
+
+.card {
+  background-color: var(--card-bg-light);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Tinted backgrounds using RGBA matting */
+.card:nth-child(4n+1) { background-color: rgba(0, 102, 204, 0.08); }
+.card:nth-child(4n+2) { background-color: rgba(255, 152, 0, 0.08); }
+.card:nth-child(4n+3) { background-color: rgba(139, 195, 74, 0.08); }
+.card:nth-child(4n+4) { background-color: rgba(233, 30, 99, 0.08); }
+
+/* Icon color remains bold */
+.card-icon {
+  color: var(--color-primary);
+}
+.card:nth-child(4n+2) .card-icon { color: var(--color-secondary); }
+.card:nth-child(4n+3) .card-icon { color: var(--color-tertiary); }
+.card:nth-child(4n+4) .card-icon { color: var(--color-quaternary); }
 
 
 /* === Button === */
